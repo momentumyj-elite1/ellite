@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta name="google-site-verification" content="jO0QJWWDmzyzKNY-ObiWrp_xW1xXZHT64vGMz8mm_Jo" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>강남 엘리트 하이퍼블릭 | ELITE GANGNAM HIGHPUBLIC</title>
@@ -112,9 +111,19 @@
   .hero-bg {
     position: absolute;
     inset: 0;
+    background-image: url('https://static.wixstatic.com/media/ee8a66_5239b728d7e94a82b125d1073c6a2b49~mv2.png/v1/fill/w_979,h_504,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/ellite.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.25);
+  }
+
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: 
-      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,169,110,0.08) 0%, transparent 70%),
-      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,169,110,0.05) 0%, transparent 60%);
+      radial-gradient(ellipse 80% 60% at 50% 40%, rgba(201,169,110,0.15) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 80%, rgba(201,169,110,0.08) 0%, transparent 60%);
   }
 
   .hero-line {
@@ -366,6 +375,32 @@
     font-size: 0.82rem;
     color: var(--text-muted);
     line-height: 2;
+  }
+
+  .feature-card-img {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    border: none;
+  }
+
+  .feature-card-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 2.5rem 2rem;
+    background: linear-gradient(to top, rgba(10,10,10,0.92) 60%, rgba(10,10,10,0.5) 100%);
+    height: 100%;
+    min-height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: background 0.3s;
+  }
+
+  .feature-card-img:hover .feature-card-overlay {
+    background: linear-gradient(to top, rgba(10,10,10,0.97) 60%, rgba(10,10,10,0.7) 100%);
   }
 
   /* ── PRICE ── */
@@ -777,25 +812,33 @@
         <p class="feature-title">강남 최저가 가성비</p>
         <p class="feature-desc">제일 저렴한 금액으로 가성비 있게 즐기실 수 있습니다. 타 가게와 비교불가! 초저녁 할인 이벤트로 더욱 합리적인 가격 제공.</p>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">🏆</span>
-        <p class="feature-title">최대 규모 시설</p>
-        <p class="feature-desc">강남 최대 규모의 하이퍼블릭. 현대적인 모던 인테리어와 최고급 음향 시설을 갖추고 있습니다.</p>
+      <div class="feature-card feature-card-img" style="background-image:url('https://static.wixstatic.com/media/ee8a66_ffb64eb23a1c44d3a13bd90285f5ed8e~mv2.png/v1/crop/x_29,y_0,w_964,h_1364/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/qqqqqe_edited.png')">
+        <div class="feature-card-overlay">
+          <span class="feature-icon">🏆</span>
+          <p class="feature-title">최대 규모 시설</p>
+          <p class="feature-desc">강남 최대 규모의 하이퍼블릭. 현대적인 모던 인테리어와 최고급 음향 시설을 갖추고 있습니다.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">⏰</span>
-        <p class="feature-title">연중무휴 24시간</p>
-        <p class="feature-desc">하루 3시간 대청소 시간을 제외한 모든 시간 운영. 공휴일 포함 365일 언제든 방문 가능합니다.</p>
+      <div class="feature-card feature-card-img" style="background-image:url('https://static.wixstatic.com/media/ee8a66_e7d0e9312edd4ff59219e712be5d655d~mv2.png/v1/crop/x_0,y_260,w_887,h_1254/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/124124124.png')">
+        <div class="feature-card-overlay">
+          <span class="feature-icon">⏰</span>
+          <p class="feature-title">연중무휴 24시간</p>
+          <p class="feature-desc">하루 3시간 대청소 시간을 제외한 모든 시간 운영. 공휴일 포함 365일 언제든 방문 가능합니다.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">👑</span>
-        <p class="feature-title">VIP 전담 서비스</p>
-        <p class="feature-desc">200명 이상의 상주 직원이 고객님의 완벽한 파티를 위해 최선을 다합니다.</p>
+      <div class="feature-card feature-card-img" style="background-image:url('https://static.wixstatic.com/media/ee8a66_5504c9a2e5784e9e8a3353261ca11216~mv2.jpg/v1/crop/x_0,y_32,w_736,h_1041/fill/w_239,h_338,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/vip_edited.jpg')">
+        <div class="feature-card-overlay">
+          <span class="feature-icon">👑</span>
+          <p class="feature-title">VIP 전담 서비스</p>
+          <p class="feature-desc">200명 이상의 상주 직원이 고객님의 완벽한 파티를 위해 최선을 다합니다.</p>
+        </div>
       </div>
-      <div class="feature-card">
-        <span class="feature-icon">🎵</span>
-        <p class="feature-title">프리미엄 음향</p>
-        <p class="feature-desc">최고급 음향 시설과 노래방 시스템으로 최상의 엔터테인먼트를 경험하세요.</p>
+      <div class="feature-card feature-card-img" style="background-image:url('https://static.wixstatic.com/media/ee8a66_a0cdd84c3f6747f0bc4997d61b15302e~mv2.png/v1/crop/x_0,y_209,w_1152,h_1629/fill/w_239,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/%EC%9D%B4%EB%AF%B8%EC%A7%80.png')">
+        <div class="feature-card-overlay">
+          <span class="feature-icon">🎵</span>
+          <p class="feature-title">프리미엄 음향</p>
+          <p class="feature-desc">최고급 음향 시설과 노래방 시스템으로 최상의 엔터테인먼트를 경험하세요.</p>
+        </div>
       </div>
       <div class="feature-card">
         <span class="feature-icon">🚗</span>
