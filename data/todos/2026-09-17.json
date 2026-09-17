@@ -1,0 +1,72 @@
+{
+  "date": "2026-09-17",
+  "site": "ellite",
+  "items": [
+    {
+      "title": "'선릉역 엘리트' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 11.2, 노출 4",
+      "impressions": 4,
+      "clicks": 0,
+      "position": 11.2,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "'선릉 엘리트' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 11.3, 노출 42",
+      "impressions": 42,
+      "clicks": 3,
+      "position": 11.3,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "'선릉엘리트' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 14.0, 노출 3",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 14.0,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "'선릉역 길 찾기' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 19.0, 노출 1",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 19.0,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "karaoke-faq.html 노출 급감 원인 점검",
+      "target_file": "karaoke-faq.html",
+      "why": "노출이 크게 줄면 색인·콘텐츠·경쟁 변화 신호",
+      "evidence": "노출 3 → 1 (-66%)",
+      "impressions": 1,
+      "clicks": 0,
+      "position": 8.0,
+      "check": {
+        "method": "title_changed",
+        "baseline": "강남 가라오케 자주 묻는 질문 | 선릉 엘리트"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    }
+  ]
+}
