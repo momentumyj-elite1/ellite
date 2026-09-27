@@ -52,6 +52,8 @@
   }
   .calc-field select:focus { outline: none; border-color: var(--gold); }
   .calc-hint { font-size: 0.74rem; color: var(--text-muted); margin-top: .4rem; }
+  .calc-mgr-status { color: var(--gold); }
+  .calc-mgr-status a { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
 
   .calc-result { border: 1px solid rgba(201,169,110,.45); background: linear-gradient(120deg,rgba(201,169,110,.10),rgba(201,169,110,.03)); padding: 1.6rem 1.6rem; margin-top: 1.5rem; }
   .result-line { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; padding: .5rem 0; }
@@ -169,6 +171,8 @@
       <div class="calc-field">
         <label for="calc-managers">매니저 인원</label>
         <select id="calc-managers"></select>
+        <p class="calc-hint">보통 손님 수와 동일하게 맞춥니다. 필요하면 직접 조정하세요.</p>
+        <p class="calc-hint calc-mgr-status" id="calc-mgr-status" style="display:none;">직접 조정됨 · <a href="#" id="calc-mgr-reset">손님 수와 같게 맞추기</a></p>
       </div>
     </div>
 
@@ -255,8 +259,8 @@ function toggleDrawer(btn) {
   fill($('calc-stay'), stay, 3);
   var ppl = []; for (var p = 1; p <= 15; p++) ppl.push([p, p + '명']);
   fill($('calc-people'), ppl, 4);
-  var mgr = []; for (var m = 0; m <= 8; m++) mgr.push([m, m + '명']);
-  fill($('calc-managers'), mgr, 2);
+  var mgr = []; for (var m = 0; m <= 15; m++) mgr.push([m, m + '명']);
+  fill($('calc-managers'), mgr, 4);
 
   function isFirstPart(day, hour) {
     // 부 판정 — 입실 시각 기준
@@ -275,6 +279,8 @@ function toggleDrawer(btn) {
     var stayH = parseInt($('calc-stay').value, 10);
     var people = parseInt($('calc-people').value, 10);
     var managers = parseInt($('calc-managers').value, 10);
+    var mgrStatus = document.getElementById('calc-mgr-status');
+    if (mgrStatus) mgrStatus.style.display = (managers !== people) ? '' : 'none';
 
     var first = isFirstPart(day, hour);
     var buLabel = first ? '1부' : '2부';
@@ -309,8 +315,26 @@ function toggleDrawer(btn) {
       '<div class="result-total"><span class="r-label">최소 예상 금액</span><span class="r-amount">' + fmt(total) + '</span></div>';
   }
 
-  ['calc-day', 'calc-start', 'calc-stay', 'calc-people', 'calc-managers'].forEach(function (id) {
+  var managerManuallySet = false;
+  function syncManagersToPeople() {
+    $('calc-managers').value = String(parseInt($('calc-people').value, 10));
+  }
+  ['calc-day', 'calc-start', 'calc-stay'].forEach(function (id) {
     $(id).addEventListener('change', calc);
+  });
+  $('calc-people').addEventListener('change', function () {
+    if (!managerManuallySet) syncManagersToPeople();
+    calc();
+  });
+  $('calc-managers').addEventListener('change', function () {
+    managerManuallySet = true;
+    calc();
+  });
+  $('calc-mgr-reset').addEventListener('click', function (e) {
+    e.preventDefault();
+    managerManuallySet = false;
+    syncManagersToPeople();
+    calc();
   });
   // 방문 요일 기본값: 접속 당일 (0시~6시 사이는 영업 기준상 전날 밤이므로 전날 요일)
   (function () {
@@ -320,6 +344,7 @@ function toggleDrawer(btn) {
     if (now.getHours() < 6) { d = (d + 6) % 7; }
     $('calc-day').value = days[d];
   })();
+  syncManagersToPeople();
   calc();
 })();
 </script>
