@@ -1,0 +1,74 @@
+{
+  "date": "2026-10-30",
+  "site": "ellite",
+  "items": [
+    {
+      "title": "hours.html 순위 올리기 (콘텐츠 보강)",
+      "target_file": "hours.html",
+      "why": "노출은 있으나 순위 11~30위라 클릭이 안 나옴 — 순위부터 올려야 함",
+      "evidence": "노출 168 · 클릭 0 · 순위 29.3",
+      "impressions": 168,
+      "clicks": 0,
+      "position": 29.3,
+      "check": {
+        "method": "title_changed",
+        "baseline": "강남 가라오케 영업시간 | 24시간 연중무휴 · 1부 2부 안내"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    },
+    {
+      "title": "sinsa-guide.html 순위 올리기 (콘텐츠 보강)",
+      "target_file": "sinsa-guide.html",
+      "why": "노출은 있으나 순위 11~30위라 클릭이 안 나옴 — 순위부터 올려야 함",
+      "evidence": "노출 85 · 클릭 0 · 순위 13.8",
+      "impressions": 85,
+      "clicks": 0,
+      "position": 13.8,
+      "check": {
+        "method": "title_changed",
+        "baseline": "신사 가라오케 안내 | 가로수길·압구정 상권 정리"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    },
+    {
+      "title": "nonhyeon-guide.html 순위 올리기 (콘텐츠 보강)",
+      "target_file": "nonhyeon-guide.html",
+      "why": "노출은 있으나 순위 11~30위라 클릭이 안 나옴 — 순위부터 올려야 함",
+      "evidence": "노출 40 · 클릭 0 · 순위 27.8",
+      "impressions": 40,
+      "clicks": 0,
+      "position": 27.8,
+      "check": {
+        "method": "title_changed",
+        "baseline": "논현 가라오케 안내 | 강남 한복판 상권 정리"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    },
+    {
+      "title": "'신사 가라오케' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 10.3, 노출 49",
+      "impressions": 49,
+      "clicks": 0,
+      "position": 10.3,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "'선릉엘리트' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 11.0, 노출 3",
+      "impressions": 3,
+      "clicks": 0,
+      "position": 11.0,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    }
+  ]
+}

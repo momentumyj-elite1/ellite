@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-25",
+  "site": "ellite",
+  "items": [
+    {
+      "title": "hours.html 순위 올리기 (콘텐츠 보강)",
+      "target_file": "hours.html",
+      "why": "노출은 있으나 순위 11~30위라 클릭이 안 나옴 — 순위부터 올려야 함",
+      "evidence": "노출 34 · 클릭 0 · 순위 17.8",
+      "impressions": 34,
+      "clicks": 0,
+      "position": 17.8,
+      "check": {
+        "method": "title_changed",
+        "baseline": "강남 가라오케 영업시간 | 24시간 연중무휴 · 1부 2부 안내"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    },
+    {
+      "title": "'선릉가라오케' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 18.7, 노출 12",
+      "impressions": 12,
+      "clicks": 0,
+      "position": 18.7,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "'선릉 가라오케' 검색어 강화",
+      "target_file": null,
+      "why": "11~20위 — 조금만 개선하면 1페이지(10위 이내) 진입 가능",
+      "evidence": "순위 19.8, 노출 29",
+      "impressions": 29,
+      "clicks": 0,
+      "position": 19.8,
+      "check": {
+        "method": "manual"
+      },
+      "how_to_check": "자동 판별 불가 — 수동 확인"
+    },
+    {
+      "title": "price.html 노출 급감 원인 점검",
+      "target_file": "price.html",
+      "why": "노출이 크게 줄면 색인·콘텐츠·경쟁 변화 신호",
+      "evidence": "노출 177 → 42 (-76%)",
+      "impressions": 42,
+      "clicks": 2,
+      "position": 25.2,
+      "check": {
+        "method": "title_changed",
+        "baseline": "강남 가라오케 주대 가격 | 1부 2부 · TC · 룸 이용료 안내"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    },
+    {
+      "title": "entertainment-cost.html 노출 급감 원인 점검",
+      "target_file": "entertainment-cost.html",
+      "why": "노출이 크게 줄면 색인·콘텐츠·경쟁 변화 신호",
+      "evidence": "노출 2 → 1 (-50%)",
+      "impressions": 1,
+      "clicks": 1,
+      "position": 1.0,
+      "check": {
+        "method": "title_changed",
+        "baseline": "강남 접대 비용 현실적으로 얼마? | 선릉 엘리트"
+      },
+      "how_to_check": "대상 파일의 <title> 이 이전과 달라졌으면 완료"
+    }
+  ]
+}
